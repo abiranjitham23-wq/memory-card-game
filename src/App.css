@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.App {
+  max-width: 860px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+}
+
+.card .front,
+.card .back {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  color: black;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.card .front {
+  transform: rotateY(90deg);
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+}
+
+.card {
+  height: 120px;
+}
